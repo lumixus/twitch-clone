@@ -22,7 +22,7 @@ export default {
     border: none;
     color:#eff;
     padding: 5px;
-    border-radius: 8px;
+    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
 }

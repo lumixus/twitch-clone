@@ -34,13 +34,13 @@ export default {
     <!-- User Icons -->
     <div class="navbar-right">
       <div class="navbar-crown">
-          <fa icon="crown" size="lg" inverse />
+          <fa icon="crown"  inverse />
       </div>
       <div class="navbar-archive">
-          <fa icon="archive" size="lg" inverse />
+          <fa icon="archive"  inverse />
       </div>
       <div class="navbar-message">
-        <fa icon="comment-alt" size="lg" inverse />
+        <fa icon="comment-alt"  inverse />
       </div>
       <div class="navbar-bit">
           <BitButton />
@@ -94,7 +94,7 @@ export default {
 .navbar-crown,
 .navbar-message,
 .navbar-archive {
-  padding-right: 2rem !important;
+  padding-right: 1rem !important;
 }
 
 .navbar-logo {
