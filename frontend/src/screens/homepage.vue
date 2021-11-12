@@ -1,9 +1,13 @@
 <script>
 import livestreamsmall from "../components/livestreambox/livestreamsmall.vue";
+import hpcategorybox from "../components/categorybox/hpcategorybox.vue";
+import type from "../components/typebox/type.vue";
 export default {
-    name : "Homepage",
+    name : "homepage",
     components : {
-        livestreamsmall
+        livestreamsmall,
+        hpcategorybox,
+        type
     }
 }
 </script>
@@ -29,6 +33,23 @@ export default {
 
      <div class="homepage-category-title">
     <h3>Categories That You May Like</h3>
+    </div>
+
+    <div class="categories-container">
+        <hpcategorybox />
+        <hpcategorybox />
+        <hpcategorybox />
+        <hpcategorybox />
+        <hpcategorybox />
+    </div>
+
+    <div class="custom-hr"></div>
+
+    <div class="stream-types-container">
+        <type />
+        <type />
+        <type />
+        <type />
     </div>
 </div>
 </template>
@@ -63,6 +84,23 @@ export default {
 
 .homepage-category-title{
     color : white;
+    margin-bottom:10px;
+}
+
+.categories-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.stream-types-container{
+    margin-bottom:50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 </style>

@@ -11,11 +11,21 @@ export default {
 
 
 <template>
+<div>
+    <router-link :to="'/'+channelName">
+
+    
 <div class="sidebar-channel-container sidebar-channel-hover">
     <div class="sidebar-channel-logo-container"><img :src="'https://picsum.photos/seed/'+imgSeed+'/200/200'" alt=""></div>
     <div class="sidebar-channel-name"><p>{{channelName}}</p><p class="sidebar-channel-game">Grand Theft Auto</p></div>
     <div class="sidebar-channel-viewers">{{viewers > 999 ? (viewers / 1000).toFixed(1) + " B" : viewers}}</div>
+  
 </div>
+
+  </router-link>
+
+</div>
+
   
 </template>
 

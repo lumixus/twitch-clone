@@ -21,8 +21,8 @@ export default {
   <div class="navbar-container">
     <!-- Logo and base navs -->
     <div class="navbar-left">
-      <div class="navbar-logo"><fa :icon="['fab','twitch']" inverse size="2x" /></div>
-      <div class="navbar-following-channels navbar-link"><h4><a href="">Followed</a></h4></div>
+      <div class="navbar-logo"><router-link to="/"><fa :icon="['fab','twitch']" inverse size="2x" /></router-link></div>
+      <div class="navbar-following-channels navbar-link"><h4><router-link to="/">Followed</router-link></h4></div>
       <div class="navbar-browse navbar-link"><h4><a>Browse</a></h4></div>
       <div class="navbar-etc"><fa icon="ellipsis-v" inverse /></div>
     </div>

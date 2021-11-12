@@ -4,7 +4,7 @@
     <Sidebar />
     <main>
       <div class="content">
-        <Homepage />
+        <router-view />
       </div>
     </main>
   </div>
@@ -13,13 +13,11 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 import Sidebar from "./components/Sidebar.vue";
-import Homepage from "./screens/homepage.vue";
 export default {
   name: "App",
   components: {
     Navbar,
-    Sidebar,
-    Homepage
+    Sidebar
   },
 };
 
@@ -33,6 +31,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a{
+  text-decoration: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,6 +51,7 @@ html,body{
   padding-top:75px;
   padding-left:270px;
   padding-right: 30px;
+
 }
 
 
