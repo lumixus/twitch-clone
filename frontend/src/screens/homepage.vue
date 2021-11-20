@@ -46,10 +46,10 @@ export default {
     <div class="custom-hr"></div>
 
     <div class="stream-types-container">
-        <type />
-        <type />
-        <type />
-        <type />
+        <type :typeName="'Gaming'" />
+        <type :typeName="'IRL'" />
+        <type :typeName="'Just Chatting'" />
+        <type :typeName="'Sports'" />
     </div>
 </div>
 </template>

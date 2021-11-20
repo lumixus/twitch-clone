@@ -1,6 +1,9 @@
 <script>
 export default {
- name : "type"
+ name : "type",
+ props : {
+     typeName : String
+ }
 }
 </script>
 
@@ -11,7 +14,7 @@ export default {
      
 
       <div class="hp-type-name">
-      <h1>Gaming</h1>
+      <h2>{{typeName}}</h2>
       </div>
 
        <div class="gaming-img">
