@@ -58,12 +58,15 @@ html,body{
 @media only screen and (max-width:1200px) {
   .content{
   padding-left:80px;
+  padding-right:0px;
   }
 }
 
 
 .content-shrink{
   padding-left:80px !important;
+  padding-right:0px;
+  margin-right:0px;
 }
 
 
