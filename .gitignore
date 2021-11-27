@@ -1,7 +1,8 @@
 .DS_Store
 frontend/node_modules
 /dist
-
+frontend/.git
+backend/.git
 
 # local env files
 .env.local
