@@ -12,7 +12,7 @@ export default {
 
 <template>
 <div>
-    <router-link :to="'/'+channelName">
+    <a :href="'/'+channelName">
 
     
 <div class="sidebar-channel-container sidebar-channel-hover">
@@ -22,7 +22,7 @@ export default {
   
 </div>
 
-  </router-link>
+  </a>
 
 </div>
 

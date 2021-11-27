@@ -3,13 +3,15 @@ import SearchButton from "./buttons/SearchButton.vue";
 import searchinput from "./input/searchinput.vue";
 import BitButton from "./buttons/BitButton.vue";
 import roundedimage from "./imageholder/roundedimage.vue";
+import notloggedin from "./navbaritems/notloggedin.vue";
 export default {
   name: "Navbar",
   components: {
     SearchButton,
     searchinput,
     BitButton,
-    roundedimage
+    roundedimage,
+    notloggedin
   },
 };
 </script>
@@ -21,8 +23,8 @@ export default {
   <div class="navbar-container">
     <!-- Logo and base navs -->
     <div class="navbar-left">
-      <div class="navbar-logo"><router-link to="/"><fa :icon="['fab','twitch']" inverse size="2x" /></router-link></div>
-      <div class="navbar-following-channels navbar-link"><h4><router-link to="/">Followed</router-link></h4></div>
+      <div class="navbar-logo"><a href="/"><fa :icon="['fab','twitch']" inverse size="2x" /></a></div>
+      <div class="navbar-following-channels navbar-link"><h4><a href="/">Followed</a></h4></div>
       <div class="navbar-browse navbar-link"><h4><a>Browse</a></h4></div>
       <div class="navbar-etc"><fa icon="ellipsis-v" inverse /></div>
     </div>
@@ -36,17 +38,18 @@ export default {
       <div class="navbar-crown">
           <fa icon="crown"  inverse />
       </div>
-      <div class="navbar-archive">
+      <div class="navbar-archive hide">
           <fa icon="archive"  inverse />
       </div>
-      <div class="navbar-message">
+      <div class="navbar-message hide">
         <fa icon="comment-alt"  inverse />
       </div>
-      <div class="navbar-bit">
+      <div class="navbar-bit hide">
           <BitButton />
       </div>
       <div class="user-profile-image">
-          <roundedimage />
+          <notloggedin />
+          <roundedimage class="hide" />
       </div>
     </div>
   </div>
@@ -84,6 +87,12 @@ export default {
   width: 40%;
 }
 
+
+.navbar-etc svg:hover{
+  cursor: pointer;
+  color : #a970ff !important;
+}
+
 .navbar-right {
   display: flex;
   justify-content: flex-end;
@@ -95,6 +104,11 @@ export default {
 .navbar-message,
 .navbar-archive {
   padding-right: 1rem !important;
+  cursor: pointer;
+}
+
+.navbar-crown svg:hover, .navbar-message svg:hover, .navbar-archive svg:hover{
+  color : #a970ff;
 }
 
 .navbar-logo {

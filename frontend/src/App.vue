@@ -2,6 +2,7 @@
   <div>
     <Navbar />
     <Sidebar />
+    <loginpopup />
     <main>
       <div class="content">
         <router-view />
@@ -12,12 +13,14 @@
 
 <script>
 import Navbar from "./components/Navbar.vue";
+import loginpopup from "./components/popups/loginpopup.vue";
 import Sidebar from "./components/Sidebar.vue";
 export default {
   name: "App",
   components: {
     Navbar,
-    Sidebar
+    Sidebar,
+    loginpopup
   },
 };
 
