@@ -1,15 +1,15 @@
 import homepage from "../screens/homepage.vue";
 import stream from "../screens/stream.vue";
-import {createRouter, createWebHistory} from 'vue-router';
+import browse from "../screens/browse.vue";
+import { createRouter, createWebHistory } from "vue-router";
 
-const vueRouter =  createRouter({
+const vueRouter = createRouter({
   history: createWebHistory(),
-    routes : [
-      {path : "/", component : homepage},
-      {path : "/:broadcaster", component : stream},
+  routes: [
+    { path: "/", component: homepage },
+    { path: "/:broadcaster", component: stream },
+    { path: "/directory", component: browse },
+  ],
+});
 
-    ]
-  });
-
-
-  export default vueRouter;
+export default vueRouter;

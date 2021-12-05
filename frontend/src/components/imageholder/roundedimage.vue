@@ -1,8 +1,15 @@
 <script>
+import vueRouter from "../../router/index";
 export default {
 methods : {
     toggleUserMenu(){
         document.querySelector(".sub-menu-container").classList.toggle("hide");
+    }
+},
+computed : {
+    logout(){
+        vueRouter.push("/");
+        return this.$store.commit("logoutUser");
     }
 }
 }
@@ -22,7 +29,7 @@ methods : {
         <ul class="sub-menu">
             <li class="sub-menu-item">Profile</li>
             <li class="sub-menu-item">Settings</li>
-            <li class="sub-menu-item">Logout</li>
+            <li class="sub-menu-item" @click="logout">Logout</li>
         </ul>
     </div>
     </div>

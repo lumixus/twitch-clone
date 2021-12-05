@@ -24,6 +24,7 @@ export default {
     display: flex;
     flex-direction: column;
     padding-bottom:2rem;
+    cursor: pointer;
 }
 
 .category-box-name{

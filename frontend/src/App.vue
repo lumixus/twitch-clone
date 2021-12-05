@@ -3,6 +3,7 @@
     <Navbar />
     <Sidebar />
     <loginpopup />
+    <registerpopup />
     <main>
       <div class="content">
         <router-view />
@@ -14,14 +15,19 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 import loginpopup from "./components/popups/loginpopup.vue";
+import registerpopup from "./components/popups/registerpopup.vue";
 import Sidebar from "./components/Sidebar.vue";
 export default {
   name: "App",
   components: {
     Navbar,
     Sidebar,
-    loginpopup
+    loginpopup,
+    registerpopup
   },
+  mounted(){
+    document.title = "Twitch Clone";
+  }
 };
 
 </script>

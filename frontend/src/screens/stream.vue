@@ -80,6 +80,7 @@ export default {
     };
   },
   mounted() {
+    document.title = this.$route.params.broadcaster + "- Twitch Clone";
     this.player = videojs(this.$refs.videoPlayer, this.options);
   
   },

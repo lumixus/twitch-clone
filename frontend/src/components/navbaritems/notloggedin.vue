@@ -8,9 +8,15 @@ export default {
      },
      openLoginPopup(){
          document.querySelector("#login-popup").classList.toggle("hide");
+     },
+     openRegisterPopup(){
+         document.querySelector("#register-popup").classList.toggle("hide");
      }
+ },
+ 
+
  }
-}
+
 </script>
 
 
@@ -18,8 +24,8 @@ export default {
 
 <template>
     <div class="button-group">
-        <button class="register-button">Kayıt Ol</button>
-        <button class="login-button" @click="openLoginPopup">Giriş Yap</button>
+        <button class="register-button" @click="openRegisterPopup">Register</button>
+        <button class="login-button" @click="openLoginPopup">Login</button>
         <div class="navbar-user-icon-container">
         <fa icon="user" inverse class="navbar-user-icon" @click="submenuHandler" />
         <div class="navbar-user-icon-submenu-container hide">

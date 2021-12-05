@@ -13,7 +13,15 @@ export default {
     roundedimage,
     notloggedin
   },
+  computed : {
+     getUser() {
+         return this.$store.state.user;
+     }
+ }
 };
+
+
+
 </script>
 
 
@@ -25,7 +33,7 @@ export default {
     <div class="navbar-left">
       <div class="navbar-logo"><a href="/"><fa :icon="['fab','twitch']" inverse size="2x" /></a></div>
       <div class="navbar-following-channels navbar-link"><h4><a href="/">Followed</a></h4></div>
-      <div class="navbar-browse navbar-link"><h4><a>Browse</a></h4></div>
+      <div class="navbar-browse navbar-link"><h4><a href="/directory">Browse</a></h4></div>
       <div class="navbar-etc"><fa icon="ellipsis-v" inverse /></div>
     </div>
     <!-- Search Box -->
@@ -38,18 +46,18 @@ export default {
       <div class="navbar-crown">
           <fa icon="crown"  inverse />
       </div>
-      <div class="navbar-archive hide">
+      <div v-if="getUser" class="navbar-archive ">
           <fa icon="archive"  inverse />
       </div>
-      <div class="navbar-message hide">
+      <div v-if="getUser" class="navbar-message ">
         <fa icon="comment-alt"  inverse />
       </div>
-      <div class="navbar-bit hide">
+      <div v-if="getUser" class="navbar-bit ">
           <BitButton />
       </div>
       <div class="user-profile-image">
-          <notloggedin />
-          <roundedimage class="hide" />
+          <notloggedin v-if="!getUser" />
+          <roundedimage v-if="getUser " class="" />
       </div>
     </div>
   </div>
